@@ -13,7 +13,6 @@
     if($db_found)
     {
         $sql = "INSERT INTO users(nom,prenom,mail,numtel,password) VALUES ('" . $_SESSION['nom'] . "','" . $_SESSION['prenom'] . "','" . $_SESSION['mail'] . "','" . $_SESSION['num_tel'] . "','" . $_SESSION['cypherpass'] . "');";
-        echo $sql;
         $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
         
     }

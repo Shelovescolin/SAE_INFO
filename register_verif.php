@@ -39,7 +39,7 @@
         $_SESSION['prenom'] = $prenom;
         $_SESSION['mail'] = $mail;
         $_SESSION['num_tel'] = $num_tel;
-        $_SESSION['cypherpass'] = $cypher_pass;
+        $_SESSION['password'] = $password;
 
 
         header('Location: http://localhost:3000/SAE/ajout_infos_register.php');
