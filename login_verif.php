@@ -3,7 +3,9 @@
     session_start();
     $loginOK = FALSE;
 
-    $nom = $prenom = $password = $cypherpass = "";
+    require('config.php');
+
+    $nom = $prenom = $mail = $numtel = $password = $cypherpass = "";
 
     $nom =isset($_POST["nom"])?$_POST["nom"]:"";
     $prenom =isset($_POST["prenom"])?$_POST["prenom"]:"";
@@ -26,16 +28,30 @@
 
     if($loginOK)
     {   
+
+        if($db_found)
+        {
+            $sql = "SELECT mail,numtel FROM users WHERE nom = '" . $nom . "' AND prenom = '" . $prenom . "';";
+            $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
+
+            while ($data = mysqli_fetch_assoc($req))
+            {
+                $_SESSION['mail'] = $data['mail'];
+                $_SESSION['numtel'] = $data['numtel'];
+            }  
+
+        }
+
         $_SESSION['nom'] = $nom;
         $_SESSION['prenom'] = $prenom;
         $_SESSION['password'] = $password;
 
-        header('Location: http://localhost:3000/SAE/index.html');
+        header('Location: http://localhost:3000/SAE/accueil.php');
         exit();
     }
     else
     {
-        echo "Erreur lors de la création de votre compte, veuillez réssayer ultrérieurement.";
+        echo "Erreur lors de la connexion à votre compte, veuillez réssayer ultrérieurement.";
         echo "<a href='http://localhost:3000/SAE/login.html'><button>Page de connexion</button></a>";
     }
 ?>

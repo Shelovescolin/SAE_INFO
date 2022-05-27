@@ -1,14 +1,7 @@
 <?php
 
     session_start();
-
-    $server = "localhost";
-    $user = "root";
-    $pass = "Colin13-iris29";
-    $DB = "SAE_INFO";
-
-    $db_handle = new mysqli($server, $user, $pass);
-    $db_found = mysqli_select_db($db_handle, $DB);
+    require('config.php');
 
     if($db_found)
     {
@@ -16,4 +9,8 @@
         $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
         
     }
+    
+    header('Location: http://localhost:3000/SAE/infos_compte.php');
+    exit();
+
 ?>

@@ -15,6 +15,7 @@ function test_pass_login($nom, $prenom, $password)
     if($db_found)
     {
         $sql = "SELECT password FROM users WHERE nom = '" . $nom . "' AND prenom = '" . $prenom . "';";
+        echo $sql;
         $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
 
         while ($data = mysqli_fetch_assoc($req))
@@ -29,5 +30,6 @@ function test_pass_login($nom, $prenom, $password)
        $loginOK = TRUE;
        return $loginOK;
     }
+    mysql_close($db_handle); 
 }
 ?>

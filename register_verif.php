@@ -41,7 +41,6 @@
         $_SESSION['num_tel'] = $num_tel;
         $_SESSION['password'] = $password;
 
-
         header('Location: http://localhost:3000/SAE/ajout_infos_register.php');
         exit();
     }
