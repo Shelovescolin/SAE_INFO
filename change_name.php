@@ -17,20 +17,4 @@
 
     mysqli_close($db_handle);
 
-
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-<form method="POST" action="">
-        <center>
-            Nouveau nom : <input type="text" name="nouveau_nom">
-            <input type="submit" value="Envoyer" name="submit">
-        </center>
-    </form>
-</body>
-</html>

@@ -4,13 +4,7 @@ function test_pass_login($nom, $prenom, $password)
 {
     global $nom, $prenom, $password, $cypherpass, $loginOK;
 
-    $server = "localhost";
-    $user = "root";
-    $pass = "Colin13-iris29";
-    $DB = "SAE_INFO";
-
-    $db_handle = new mysqli($server, $user, $pass);
-    $db_found = mysqli_select_db($db_handle, $DB);
+    require('config.php');
 
     if($db_found)
     {
@@ -25,6 +19,7 @@ function test_pass_login($nom, $prenom, $password)
     }
 
     $test_password = password_verify($password,$cypherpass);
+    
     if($test_password)
     {
        $loginOK = TRUE;
