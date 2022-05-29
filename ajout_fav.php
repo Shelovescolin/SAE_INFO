@@ -17,6 +17,18 @@
         else $fav4 = "";
 
 
+    if($db_found)
+    {
+        $sql = "SELECT nom_fav FROM favoris WHERE id_user = '" . $_SESSION['id_user'] . "';";
+        $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
+        $nb = mysqli_num_rows($req);
+        if($nb != 0)
+        {
+            $sql = "DELETE FROM favoris WHERE id_user = '" . $_SESSION['id_user'] . "';";
+            $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
+        }
+    }
+
     if(($db_found) AND (!empty($fav1)))
     {
         $sql = "INSERT INTO favoris(nom_fav,id_user) VALUES ('" . "Cybersécurité" . "','" . $_SESSION['id_user'] . "');";
