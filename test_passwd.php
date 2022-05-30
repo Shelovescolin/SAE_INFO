@@ -17,7 +17,6 @@ function test_pass($password1, $password2)
         return $registerOK;
     }
 
-    mysql_close($db_handle); 
 }
 
 ?>

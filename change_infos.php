@@ -29,7 +29,7 @@
     {
         $sql = "UPDATE users SET numtel = '" . $_POST['nouveau_tel'] . "' WHERE nom = '" . $_SESSION['nom'] . "';";
         $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
-        $_SESSION['tel'] = $_POST['nouveau_tel'];
+        $_SESSION['numtel'] = $_POST['nouveau_tel'];
     }
 
     if(($db_found) AND isset($_POST['nouveau_password']) AND !empty($_POST['nouveau_password']))
