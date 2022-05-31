@@ -31,25 +31,25 @@
 
     if(($db_found) AND (!empty($fav1)))
     {
-        $sql = "INSERT INTO favoris(nom_fav,id_user) VALUES ('" . "Cybersécurité" . "','" . $_SESSION['id_user'] . "');";
+        $sql = "INSERT INTO favoris(nom_fav,id_user) VALUES ('" . "cybersecurity" . "','" . $_SESSION['id_user'] . "');";
         $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
     }
 
     if(($db_found) AND (!empty($fav2)))
     {
-        $sql = "INSERT INTO favoris(nom_fav,id_user) VALUES ('" . "Hacking" . "','" . $_SESSION['id_user'] . "');";
+        $sql = "INSERT INTO favoris(nom_fav,id_user) VALUES ('" . "hacking" . "','" . $_SESSION['id_user'] . "');";
         $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
     }
 
     if(($db_found) AND (!empty($fav3)))
     {
-        $sql = "INSERT INTO favoris(nom_fav,id_user) VALUES ('" . "Réseaux" . "','" . $_SESSION['id_user'] . "');";
+        $sql = "INSERT INTO favoris(nom_fav,id_user) VALUES ('" . "networks" . "','" . $_SESSION['id_user'] . "');";
         $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
     } 
 
     if(($db_found) AND (!empty($fav4)))
     {
-        $sql = "INSERT INTO favoris(nom_fav,id_user) VALUES ('" . "Cryptographie" . "','" . $_SESSION['id_user'] . "');";
+        $sql = "INSERT INTO favoris(nom_fav,id_user) VALUES ('" . "cryptography" . "','" . $_SESSION['id_user'] . "');";
         $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
     }
 

@@ -6,5 +6,4 @@
     
     $db_handle = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD);
     $db_found = mysqli_select_db($db_handle, DB_NAME);
-
 ?>

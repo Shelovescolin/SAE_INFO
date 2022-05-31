@@ -11,9 +11,11 @@
 
         while ($data = mysqli_fetch_assoc($req))
         {
+            $nom_fav = $data['nom_fav'];
+
             echo "<table border='1' width='400' align='center'>";
                 echo "<tr>";
-                    echo "<td width='200'><b>". $data['nom_fav'] . "</b></td>";
+                    echo "<td width='200'><b>". $nom_fav . "</b></td>";
                 echo "</tr>";
             echo "</table>";
         }  
