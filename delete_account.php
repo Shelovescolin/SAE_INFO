@@ -16,7 +16,6 @@
 
         $sql = "DELETE FROM users WHERE id_user = " . $_SESSION['id_user'] . ";";
         $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
-
     }
 
     $_SESSION = array();
