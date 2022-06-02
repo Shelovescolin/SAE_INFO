@@ -4,16 +4,16 @@
     require('config.php');
     require('recup_id_current_user.php');
 
-    if(isset($_POST['cyber'])) $fav1 = $_POST['cyber'];
+    if(isset($_POST['cyber'])) $fav1 = 'cybersecurity';
         else $fav1 = "";
 
-    if(isset($_POST['hacking'])) $fav2 = $_POST['hacking'];
+    if(isset($_POST['hacking'])) $fav2 = 'hacking';
         else $fav2 = "";
 
-    if(isset($_POST['networks'])) $fav3 = $_POST['networks'];
+    if(isset($_POST['networks'])) $fav3 = 'networks';
         else $fav3 = "";
 
-    if(isset($_POST['crypto'])) $fav4 = $_POST['crypto'];
+    if(isset($_POST['crypto'])) $fav4 = 'cryptography';
         else $fav4 = "";
 
 
@@ -29,28 +29,15 @@
         }
     }
 
-    if(($db_found) AND (!empty($fav1)))
-    {
-        $sql = "INSERT INTO favoris(nom_fav,id_user) VALUES ('" . "cybersecurity" . "','" . $_SESSION['id_user'] . "');";
-        $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
-    }
+    $fav = [$fav1, $fav2, $fav3, $fav4];
 
-    if(($db_found) AND (!empty($fav2)))
+    foreach($fav as $favoris)
     {
-        $sql = "INSERT INTO favoris(nom_fav,id_user) VALUES ('" . "hacking" . "','" . $_SESSION['id_user'] . "');";
-        $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
-    }
-
-    if(($db_found) AND (!empty($fav3)))
-    {
-        $sql = "INSERT INTO favoris(nom_fav,id_user) VALUES ('" . "networks" . "','" . $_SESSION['id_user'] . "');";
-        $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
-    } 
-
-    if(($db_found) AND (!empty($fav4)))
-    {
-        $sql = "INSERT INTO favoris(nom_fav,id_user) VALUES ('" . "cryptography" . "','" . $_SESSION['id_user'] . "');";
-        $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
+        if(($db_found) AND (!empty($favoris)))
+        {
+            $sql = "INSERT INTO favoris(nom_fav,id_user) VALUES ('" . $favoris . "','" . $_SESSION['id_user'] . "');";
+            $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
+        }
     }
 
     header('Location: http://localhost:3000/SAE/accueil.php');

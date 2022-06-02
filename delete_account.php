@@ -3,19 +3,16 @@
     require('config.php');
     require('recup_id_current_user.php');
 
+
+    $table = ['demande_article', 'commentaire', 'favoris', 'users'];
+
     if($db_found)
     {
-        $sql = "DELETE FROM demande_article WHERE id_user = '" . $_SESSION['id_user'] . "';";
-        $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql); 
-
-        $sql = "DELETE FROM comment WHERE id_user = '" . $_SESSION['id_user'] . "';";
-        $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
-
-        $sql = "DELETE FROM favoris WHERE id_user = '" . $_SESSION['id_user'] . "';";
-        $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);   
-
-        $sql = "DELETE FROM users WHERE id_user = " . $_SESSION['id_user'] . ";";
-        $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
+        foreach($table as $t)
+        {
+            $sql = "DELETE FROM " . $t . " WHERE id_user = '" . $_SESSION['id_user'] . "';";
+            $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql); 
+        }
     }
 
     $_SESSION = array();

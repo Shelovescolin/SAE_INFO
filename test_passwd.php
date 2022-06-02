@@ -16,7 +16,5 @@ function test_pass($password1, $password2)
         return $password;
         return $registerOK;
     }
-
 }
-
 ?>

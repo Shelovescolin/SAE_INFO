@@ -3,7 +3,7 @@
     require('config.php');
     include('test_input.php');
 
-
+    
     if(($db_found) AND isset($_POST['nouveau_nom']) AND !empty($_POST['nouveau_nom']))
     {
         $sql = "UPDATE users SET nom = '" . $_POST['nouveau_nom'] . "' WHERE prenom = '" . $_SESSION['prenom'] . "';";

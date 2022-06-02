@@ -3,6 +3,7 @@
 
     require('config.php');
     include('test_input.php');
+    require('recup_id_current_user.php');
 
     if(isset($_GET['id']) AND !empty($_GET['id']))
     {
@@ -18,7 +19,7 @@
                 {
                     if($db_found)
                     {
-                        $sql = "INSERT INTO commentaire(comm,pseudo) VALUES ('" . $commentaire . "','" . $pseudo . "');";
+                        $sql = "INSERT INTO commentaire(comm,pseudo,id_user) VALUES ('" . $commentaire . "','" . $pseudo . "','" . $_SESSION['id_user'] . "');";
                         $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
                         $c_msg = "<span style='color:green'>Votre commentaire a bien été posté</span></br>";
 
