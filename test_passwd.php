@@ -2,7 +2,7 @@
 
 function test_pass($password1, $password2)
 {
-    global $password1, $password2, $password, $registerOK;
+    global $password, $registerOK;
 
     if($password1 != $password2)
     {
@@ -13,8 +13,6 @@ function test_pass($password1, $password2)
     {
         $password = $password1;
         $registerOK = TRUE;
-        return $password;
-        return $registerOK;
     }
 }
 ?>
