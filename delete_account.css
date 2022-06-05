@@ -100,3 +100,13 @@ background: linear-gradient(344deg, rgba(79,7,54,1) 0%, rgba(172,17,17,1) 51%, r
     color: white;
     border-radius: 100px;
 }
+
+.navigation .inscription {
+    position: absolute;
+    margin-left: 15%;
+}
+
+.navigation .login {
+    position: absolute;
+    margin-left: 20%;
+}
