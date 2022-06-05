@@ -9,11 +9,12 @@ html, body {
   margin: 0; padding: 0;
 }
 body {
-   background-image: linear-gradient(to bottom, #1f71bb, #1466b9, #145ab5, #1d4eb0, #2a40aa, #303aac, #3733ad, #3f2bad, #432ab7, #4829c2, #4d27cc, #5325d6);
+   background-image: linear-gradient(to bottom, #1f71bb, #1466b9, #145ab5, #1d4eb0, #2a40aa, #303aad, #3932af, #4229b1, #4926be, #5221cb, #5b18d7, #6607e3);
 
 }
 
 nav {
+
     text-align: center  ;
 top: 0px;
 left: 0px;
@@ -34,6 +35,7 @@ ul.navigation {
 
 
 ul.navigation li {
+
     text-align: center;
     display:  inline-block;
 }
@@ -128,4 +130,14 @@ input[type=submit]
 background: linear-gradient(344deg, rgba(34,79,7,1) 0%, rgba(17,172,102,1) 51%, rgba(6,116,39,1) 100%);
     color: white;
     border-radius: 100px;
+}
+
+.navigation .inscription {
+    position: absolute;
+    margin-left: 15%;
+}
+
+.navigation .login {
+    position: absolute;
+    margin-left: 20%;
 }
