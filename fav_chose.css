@@ -75,6 +75,16 @@ ul.navigation li.current a {
 
 }
 
+.navigation .inscription {
+    position: absolute;
+    margin-left: 15%;
+}
+
+.navigation .login {
+    position: absolute;
+    margin-left: 20%;
+}
+
 
 
 
