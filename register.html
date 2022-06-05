@@ -1,16 +1,60 @@
+<!DOCTYPE html>
 <html>
-    <form method="POST" action="register_verif.php">
+<head>
+    <meta charset="utf-8">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&display=swap" rel="stylesheet">
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+  
+
+    <link href="register.css" rel="stylesheet">
+</head>
+<body>
+    
+
+  <nav> 
+    <div class="logo">CyberInfo</div>
+   <ul class="navigation">
+
+       <li><a href="#">CyberInfo</a></li>
+        <li><a href="#">Acceuil</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Contact </a></li>
+        <li><a href="#"> A propos</a></li>
+    </ul>
+</nav>
+
+
+    <div class="pagecontent">
+        <div class="formulaire">
+ <form method="POST" action="register_verif.php">
+       <p>Veuillez remplir ce formulaire pour vous inscrire ! </p>
+
         <center>
-            Nom<input type="text" name="nom">
-            Prénom<input type="text" name="prenom">
-            <br>
-            Adresse email<input type="email" name="mail">
-            Numéro de téléphone<input type="tel" name="num_tel">
-            <br>
-            Mot de passe<input type="password" name="password1">
-            Retapez votre mot de passe :<input type="password" name="password2">
-            <br>
-            <input type="submit" value="Envoyer" name="submit">
+             <label for="votrenom">Votre nom </label><input type="text" name="nom" placeholder="saisir nom de famille"> 
+
+             <label for="votreprenom">Votre prénom </label><input type="text" name="prenom" placeholder="saisir prénom"> 
+          
+            <label for="Email">Email </label><input type="email" name="mail" placeholder="saisir l'email">
+
+             <label for="numtelephone">Numéro de téléphone </label><input type="tel" name="num_tel" placeholder="saisir téléphone">
+           
+            <label for="mdp">Mot de passe </label> <input type="password" name="password1" placeholder="saisir mot de passe">
+            <label for="mdp">Confirmer Mot de passe </label> <input type="password" name="password2" placeholder="réécrire mot de passe">
+
+            
+            <label></label><input type="submit" value="Envoyer" name="submit">
         </center>
     </form>
+        </div>
+    </div>
+
+
+   
+</body>
 </html>
