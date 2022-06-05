@@ -1,24 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&display=swap" rel="stylesheet">
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+  
+
+    <link href="change_infos.css" rel="stylesheet">
 </head>
 <body>
+    
 
-<form method="POST" action="change_infos.php">
+  <nav> 
+     <div class="logo">CyberInfo</div>
+   <ul class="navigation">
+
+       <li><a href="#">CyberInfo</a></li>
+        <li><a href="#">Acceuil</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Contact </a></li>
+        <li><a href="#"> A propos</a></li>
+    </ul>
+</nav>
+
+
+    <div class="pagecontent">
+        <div class="formulaire">
+ <form method="POST" action="change_infos.php">
+       <p>Veuillez remplir ce formulaire pour modifier vos infos ! </p>
+
         <center>
-            Nouveau nom : <input type="text" name="nouveau_nom">
-        </br>
-            Nouveau prénom : <input type="text" name="nouveau_prenom">
-        </br>
-            Nouveau mail : <input type="email" name="nouveau_mail">
-        </br>
-            Nouveau numéro de tel : <input type="tel" name="nouveau_tel">
-        </br>
-            Nouveau mot de passe : <input type="password" name="nouveau_password">
-        </br>
-            <input type="submit" value="Envoyer" name="submit">
+             <label for="votrenom">Nouveau nom </label><input type="text" name="nouveau_nom" placeholder="saisir nom de famille"> 
+
+             <label for="votreprenom">Nouveau prénom </label><input type="text" name="nouveau_prenom" placeholder="saisir prénom"> 
+          
+            <label for="Email">Nouveau Email </label><input type="email" name="nouveau_mail" placeholder="saisir l'email">
+
+             <label for="numtelephone">Nouveau téléphone </label><input type="tel" name="nouveau_tel" placeholder="saisir téléphone">
+           
+            <label for="mdp">Nouveau Mot de passe </label> <input type="password" name="nouveau_password" placeholder="nouveau_password">
+            
+
+            
+            <label></label><input type="submit" value="Envoyer" name="submit">
         </center>
     </form>
+        </div>
+    </div>
+
+
+   
 </body>
 </html>
