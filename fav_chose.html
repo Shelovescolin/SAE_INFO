@@ -1,31 +1,65 @@
+<!DOCTYPE html>
 <html>
-    <form method="POST" action="ajout_fav.php">
-        <fieldset>
+<head>
+    <meta charset="utf-8">
 
-        <legend>Choisissez vos thèmes favoris :</legend>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+
+  
+
+    <link href="fav_chose.css" rel="stylesheet">
+</head>
+<body>
     
-            <div>
-                <input type="checkbox" id="cyber" name="cyber">
-                <label for="cyber">Cybersécurité</label>
-            </div>
+
+  <nav> 
+    <div class="logo">CyberInfo</div>
+   <ul class="navigation">
+
+       <li><a href="#">CyberInfo</a></li>
+        <li><a href="#">Acceuil</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Contact </a></li>
+        <li><a href="#"> A propos</a></li>
+    </ul>
+</nav>
+
+
+   <div class="pagecontent">
+        <div class="formulaire">
+ <form method="POST" action="register_verif.php">
+       <p>Choisissez vos thèmes favoris : </p>
+
+        <center>
+           
+
+           <div class="choix1"> <label for="Cybersécurité">Cybersécurité</label><input type="checkbox"  id="cyber" name="cyber" >
+              <img src="cybersec.png" width="200px" height="120px"> </div>
+
+             <div class="choix2"> <label for="hacking">hacking </label><input type="checkbox" id="hacking" name="hacking" >
+             <img src="hacking.png" width="200px" height="120px"> </div>
         
-            <div>
-                <input type="checkbox" id="hacking" name="hacking">
-                <label for="hacking">Hacking</label>
-            </div>
+             <div class="choix3"><label for="networks">Réseaux </label><input type="checkbox"  id="networks" name="networks" >
+             <img src="networks.png" width="200px" height="120px"> </div>
 
-            <div>
-                <input type="checkbox" id="networks" name="networks">
-                <label for="networks">Réseaux</label>
-            </div>
 
-            <div>
-                <input type="checkbox" id="crypto" name="crypto">
-                <label for="crypto">Cryptographie</label>
-            </div>
-            <div>
-                <button type="submit">Envoyer</button>
-            </div>
-        </fieldset>
+               <div class="choix4">  <label for="crypto">Cryptographie </label><input id="crypto" type="checkbox" name="crypto" >
+              <img src="crypto.png"width="200px" height="120px"> </div>
+            
+    <label></label><input type="submit" value="Envoyer" name="submit">            
+
+        </center>
     </form>
+        </div>
+    </div>
+
+
+   
+</body>
 </html>
