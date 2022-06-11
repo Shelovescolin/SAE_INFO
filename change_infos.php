@@ -1,6 +1,5 @@
 <?php
     session_start();
-    
     require('config.php');
     include('test_input.php');
 
