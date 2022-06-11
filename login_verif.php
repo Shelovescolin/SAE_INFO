@@ -15,7 +15,7 @@
     if(empty($nom) OR empty($prenom) OR empty($password))
     {
         echo "<script>alert('Veuillez renseigner tous les champs')</script>";
-        echo "<a href='http://localhost:3000/SAE/login.html'><button>Page de connexion</button></a>";
+        echo "<a href='http://localhost:3000/SAE_INFO/login.html'><button>Page de connexion</button></a>";
     }
     else
     {
@@ -45,13 +45,13 @@
             $_SESSION['prenom'] = $prenom;
             $_SESSION['password'] = $password;
     
-            header('Location: http://localhost:3000/SAE/accueil.php');
+            header('Location: http://localhost:3000/SAE_INFO/accueil.php');
             exit();
         }
         else
         {
             echo "Erreur lors de la connexion à votre compte, veuillez réssayer ultrérieurement. </br>";
-            echo "<a href='http://localhost:3000/SAE/login.html'><button>Page de connexion</button></a></br>";
+            echo "<a href='http://localhost:3000/SAE_INFO/login.html'><button>Page de connexion</button></a></br>";
         }
     }
 ?>

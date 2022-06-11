@@ -59,7 +59,7 @@ if(isset($c_msg))
             echo $pseudo . " : " . $comm . "</br></br>";
         } 
     }
-    echo "<a href='http://localhost:3000/SAE/accueil.php'><button>Retour</button></a>";
+    echo "<a href='http://localhost:3000/SAE_INFO/accueil.php'><button>Retour</button></a>";
 
 ?>
 

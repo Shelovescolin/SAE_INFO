@@ -1,6 +1,6 @@
 <?php
 
-include("/home/anubis/PHP/SAE/test_input.php");
+include("/home/anubis/PHP/SAE_INFO/test_input.php");
 
 class TestCase extends PHPUnit\Framework\TestCase
 {

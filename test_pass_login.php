@@ -27,7 +27,7 @@ function test_pass_login($nom, $prenom, $password)
     }
     else{
         echo "Informations incorrectes !</br>"; 
-        echo "<a href='http://localhost:3000/SAE/login.html'><button>Page de connexion</button></a>";
+        echo "<a href='http://localhost:3000/SAE_INFO/login.html'><button>Page de connexion</button></a>";
     }
 
     mysql_close($db_handle); 

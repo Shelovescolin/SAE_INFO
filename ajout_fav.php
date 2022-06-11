@@ -40,6 +40,6 @@
         }
     }
 
-    header('Location: http://localhost:3000/SAE/accueil.php');
+    header('Location: http://localhost:3000/SAE_INFO/accueil.php');
     exit();
 ?>

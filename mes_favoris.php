@@ -12,12 +12,12 @@
 
         if($nb != 0)
         {
-            echo "<a href='http://localhost:3000/SAE/delete_fav.php'><button>Supprimer les favoris</button></a>";
+            echo "<a href='http://localhost:3000/SAE_INFO/delete_fav.php'><button>Supprimer les favoris</button></a>";
         }
         else
         {
             echo "Vous n'avez aucun thème en favoris. </br>";
-            echo "<a href='http://localhost:3000/SAE/fav_chose.html'><button>Ajouter des favoris</button></a>";
+            echo "<a href='http://localhost:3000/SAE_INFO/fav_chose.html'><button>Ajouter des favoris</button></a>";
         }
     }
 

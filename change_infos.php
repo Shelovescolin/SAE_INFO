@@ -39,7 +39,7 @@
         $_SESSION['cypherpass'] = password_hash($_POST['nouveau_password'], PASSWORD_DEFAULT);
     }   
 
-    header('Location: http://localhost:3000/SAE/infos_compte.php');
+    header('Location: http://localhost:3000/SAE_INFO/infos_compte.php');
     exit();
 
     mysqli_close($db_handle);

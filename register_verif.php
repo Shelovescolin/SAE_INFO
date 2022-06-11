@@ -16,7 +16,7 @@
     if(empty($nom) OR empty($prenom) OR empty($mail) OR empty($num_tel) OR empty($password1) OR empty($password2))
     {
         echo "<script>alert('Veuillez renseigner tous les champs')</script>";
-        echo "<a href='http://localhost:3000/SAE/register.html'><button>Page d'enregistrement</button></a>";
+        echo "<a href='http://localhost:3000/SAE_INFO/register.html'><button>Page d'enregistrement</button></a>";
     }
 
     include("test_input.php");
@@ -42,13 +42,13 @@
         $_SESSION['password'] = $password;
         $_SESSION['cypherpass'] = $cypher_pass;
 
-        header('Location: http://localhost:3000/SAE/ajout_infos_register.php');
+        header('Location: http://localhost:3000/SAE_INFO/ajout_infos_register.php');
         exit();
     }
     else
     {
         echo "Erreur lors de la création de votre compte, veuillez réssayer ultrérieurement.";
-        echo "<a href='http://localhost:3000/SAE/register.html'><button>Page d'enregistrement</button></a>";
+        echo "<a href='http://localhost:3000/SAE_INFO/register.html'><button>Page d'enregistrement</button></a>";
     }
 
 ?>

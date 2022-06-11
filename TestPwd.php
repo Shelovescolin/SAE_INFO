@@ -1,6 +1,6 @@
 <?php
 
-include("/home/anubis/PHP/SAE/test_passwd.php");
+include("/home/anubis/PHP/SAE_INFO/test_passwd.php");
 
 class TestPwd extends PHPUnit\Framework\TestCase
 {
