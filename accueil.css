@@ -1,0 +1,92 @@
+* {
+
+    margin:  0;
+    padding:  0;
+}
+
+html, body {
+  width: 100%; height: 100%;
+  margin: 0; padding: 0;
+}
+body {
+    background-color:#051329 ;
+
+}
+
+nav {
+    text-align: center  ;
+top: 0px;
+left: 0px;
+right: 0px;
+position: fixed;
+}
+
+
+ul.navigation {
+    
+    list-style:none;
+    height:56px; 
+    line-height:56px;
+    background: linear-gradient(90deg, rgba(57,199,185,1) 0%, rgba(48,155,180,1) 29%, rgba(30,138,213,1) 69%, rgba(0,53,255,1) 94%);
+    font-family: system-ui;
+    font-size:19px;
+}
+
+
+ul.navigation li {
+    text-align: center;
+    display:  inline-block;
+}
+
+ul.navigation li:hover {
+      transform: scale(1.1);
+
+}
+
+ul.navigation a {
+    display:block;
+    padding:0 28px;
+    color:#ccece6;
+    text-decoration:none;
+
+}
+ul.navigation a:hover,
+ul.navigation li.current a {
+    background:#086754;
+
+}
+
+.navigation .inscription {
+    position: absolute;
+    margin-left: 15%;
+}
+
+.navigation .login {
+    position: absolute;
+    margin-left: 20%;
+}
+
+.logo {
+       font-family: 'Kdam Thmor Pro', sans-serif;
+   font-size: 30px;
+   margin-left: 35px;
+   float: left;
+}
+
+.pagecontent {
+    border: 1px solid white;
+    width: 70%;
+    height: 220%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to bottom, #051329, #0e2545, #173963, #214d82, #2963a3);
+
+}
+
+.accueil p {
+    font-family: 'Dosis', sans-serif;
+    font-size: 35px;
+    color: white;
+    padding-top: 10%;
+}
+
