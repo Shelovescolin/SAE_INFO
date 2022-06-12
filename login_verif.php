@@ -3,7 +3,7 @@
     session_start();
     $loginOK = FALSE;
 
-    require('config.php');
+    require_once('config.php');
     include("test_input.php");
 
     $nom = $prenom = $mail = $numtel = $password = $cypherpass = "";

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require('config.php');
+    require_once('config.php');
     include('test_input.php');
 
     if(($db_found) AND isset($_POST['nouveau_nom']) AND !empty($_POST['nouveau_nom']))

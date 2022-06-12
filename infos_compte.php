@@ -1,7 +1,7 @@
 <?php
 
     session_start();    
-    require('recup_type_compte.php');
+    require_once('recup_type_compte.php');
     
     if(empty($_SESSION['nom']) OR empty($_SESSION['prenom']) OR empty($_SESSION['mail']) OR empty($_SESSION['password']))
     {

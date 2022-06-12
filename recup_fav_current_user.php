@@ -1,8 +1,8 @@
 <?php
 
     session_start();
-    require('config.php');
-    require('recup_id_current_user.php');
+    require_once('config.php');
+    require_once('recup_id_current_user.php');
 
     if($db_found)
     {

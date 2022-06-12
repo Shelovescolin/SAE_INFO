@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    require('config.php');
+    require_once('config.php');
     if($db_found)
     {
         $sql = "SELECT id_user FROM users WHERE nom = '" . $_SESSION['nom'] . "' AND prenom = '" . $_SESSION['prenom'] . "';";

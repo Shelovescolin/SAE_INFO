@@ -1,9 +1,9 @@
 <meta charset="utf-8"/>
 <?php
 
-    require('config.php');
+    require_once('config.php');
     include('test_input.php');
-    require('recup_id_current_user.php');
+    require_once('recup_id_current_user.php');
 
     if(isset($_GET['id']) AND !empty($_GET['id']))
     {
