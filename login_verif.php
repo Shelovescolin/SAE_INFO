@@ -32,7 +32,6 @@
             {
                 $sql = "SELECT mail,numtel FROM users WHERE nom = '" . $nom . "' AND prenom = '" . $prenom . "';";
                 $req = mysqli_query($db_handle, $sql) or die("Erreur SQL: </br>" . $sql);
-    
                 while ($data = mysqli_fetch_assoc($req))
                 {
                     $_SESSION['mail'] = $data['mail'];
